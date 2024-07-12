@@ -1,0 +1,16 @@
+{
+    "ciudad": [
+        {
+            "nombre": "cali ",
+            "codigo_postal": "1",
+            "poblacion_estimada": "2000",
+            "pais": "colombia"
+        },
+        {
+            "nombre": "lima",
+            "codigo_postal": "2",
+            "poblacion_estimada": "1000",
+            "pais": "peru"
+        }
+    ]
+}
