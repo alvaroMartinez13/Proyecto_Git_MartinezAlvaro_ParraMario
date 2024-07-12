@@ -1,4 +1,7 @@
 #Solo acepta solo números enteros
+import re
+
+
 def solo_numeros(mensaje):
     while True:
         try:
