@@ -32,7 +32,14 @@ while True:
                     "poblacion_estimada": poblacion_estimada,
                     "pais": pais
                 }
-                nueva_ciudad(ciudad)
+                existe = nueva_ciudad(ciudad)
+                if existe is False:
+                    print("Ciudad ya existe")
+                    print("selecciona otra opcion")
+                    
+                else:
+                    print(existe)
+
                 print("--"*20)
             elif op1 == 2:
                 print("--"*20)
