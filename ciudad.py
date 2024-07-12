@@ -14,7 +14,17 @@ def existe_ciudad(clave, valorNuevo):
 
 #Agrega una ciudad
 def nueva_ciudad(nuevaCiudad):
-    print()
+    print(nuevaCiudad["nombre"])
+    existe = existe_ciudad("nombre", nuevaCiudad["nombre"])
+    if existe is False:
+        print("Ya existe la ciudad")
+        return False
+    
+    datos_ciudad["ciudad"].append(nuevaCiudad)
+
+    config.guardar_datos(datos_ciudad, ciudad)
+
+    return f"Nueva ciudad {nuevaCiudad['nombre']}"
 
 def ver_ciudades():
     for ciudad_existente in datos_ciudad["ciudad"]:
