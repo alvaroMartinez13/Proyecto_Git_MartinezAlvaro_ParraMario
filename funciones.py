@@ -1,3 +1,4 @@
+#Solo acepta solo números enteros
 def solo_numeros(mensaje):
     while True:
         try:
@@ -6,22 +7,10 @@ def solo_numeros(mensaje):
             if valido > 0:
                 return valido
             else:
-                print("{:^150}".format(Back.BLACK + Fore.CYAN +
-                      Style.BRIGHT + "╔══════════════════════════════════════╗"))
-                print("{:^160}".format(Back.BLACK + Fore.CYAN + Style.BRIGHT + " ║" + Fore.WHITE +
-                      "           Debes digitar solo números positivos          " + Fore.CYAN + "║"))
-                print("{:^150}".format(Back.BLACK + Fore.CYAN +
-                      Style.BRIGHT + "╚══════════════════════════════════════╝"))
-                # print("Debes digitar solo números positivos")
+                print("Debes digitar solo números positivos")
 
-        except Exception as e:
-            print("{:^150}".format(Back.BLACK + Fore.CYAN +
-                  Style.BRIGHT + "╔══════════════════════════════════════╗"))
-            print("{:^160}".format(Back.BLACK + Fore.CYAN + Style.BRIGHT + " ║" + Fore.WHITE +
-                  "           Debes digitar un número entero          " + Fore.CYAN + "║"))
-            print("{:^150}".format(Back.BLACK + Fore.CYAN +
-                  Style.BRIGHT + "╚══════════════════════════════════════╝"))
-            # print("Debes digitar un número entero")
+        except Exception:
+            print("Debes digitar un número entero")
 
 
 # Recibe únicamente números en texto, repite cuando no se cumple
@@ -32,13 +21,7 @@ def solo_numeros_texto(mensaje):
         if valido.isdigit():
             return valido
         else:
-            print("{:^150}".format(Back.BLACK + Fore.CYAN +
-                  Style.BRIGHT + "╔══════════════════════════════════════╗"))
-            print("{:^160}".format(Back.BLACK + Fore.CYAN + Style.BRIGHT + " ║" +
-                  Fore.WHITE + "           Digita unicamente números          " + Fore.CYAN + "║"))
-            print("{:^150}".format(Back.BLACK + Fore.CYAN +
-                  Style.BRIGHT + "╚══════════════════════════════════════╝"))
-            # print("Digita unicamente números")
+            print("Digita unicamente números")
 
 
 # No acepta que se dejen espacios, repite cuando no se cumple
@@ -48,13 +31,7 @@ def sin_espacios(mensaje):
         valido = campo_no_vacio(mensaje)
 
         if ' ' in valido:
-            print("{:^150}".format(Back.BLACK + Fore.CYAN +
-                  Style.BRIGHT + "╔══════════════════════════════════════╗"))
-            print("{:^160}".format(Back.BLACK + Fore.CYAN + Style.BRIGHT + " ║" + Fore.WHITE +
-                  "           Debes digitar información sin espacios          " + Fore.CYAN + "║"))
-            print("{:^150}".format(Back.BLACK + Fore.CYAN +
-                  Style.BRIGHT + "╚══════════════════════════════════════╝"))
-            # print("Debes digitar información sin espacios")
+            print("Debes digitar información sin espacios")
         else:
             return valido
 
@@ -69,13 +46,7 @@ def campo_no_vacio(mensaje):
         if valido.strip():
             return valido
         else:
-            print("{:^150}".format(Back.BLACK + Fore.CYAN +
-                  Style.BRIGHT + "╔══════════════════════════════════════╗"))
-            print("{:^160}".format(Back.BLACK + Fore.CYAN + Style.BRIGHT + " ║" + Fore.WHITE +
-                  "           No puedes omitir sin acceder información requerida          " + Fore.CYAN + "║"))
-            print("{:^150}".format(Back.BLACK + Fore.CYAN +
-                  Style.BRIGHT + "╚══════════════════════════════════════╝"))
-            # print("No puedes omitir sin acceder información requerida")
+            print("No puedes omitir sin acceder información requerida")
 
 
 # Solo acepta texto y sin caracteres especiales
@@ -90,12 +61,4 @@ def solo_texto(mensaje):
             return valido
         else:
             print("No se acepta números o caracteres especiales")
-
-            print("{:^150}".format(Back.BLACK + Fore.CYAN +
-                  Style.BRIGHT + "╔══════════════════════════════════════╗"))
-            print("{:^160}".format(Back.BLACK + Fore.CYAN + Style.BRIGHT + " ║" + Fore.WHITE +
-                  "           No se acepta números o caracteres especiales          " + Fore.CYAN + "║"))
-            print("{:^150}".format(Back.BLACK + Fore.CYAN +
-                  Style.BRIGHT + "╚══════════════════════════════════════╝"))
-            # print("No se acepta números o caracteres especiales")
 
