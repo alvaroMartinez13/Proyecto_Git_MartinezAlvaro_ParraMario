@@ -14,7 +14,6 @@ def existe_ciudad(clave, valorNuevo):
 
 #Agrega una ciudad
 def nueva_ciudad(nuevaCiudad):
-    print(nuevaCiudad["nombre"])
     existe = existe_ciudad("nombre", nuevaCiudad["nombre"])
     if existe is False:
         print("Ya existe la ciudad")
